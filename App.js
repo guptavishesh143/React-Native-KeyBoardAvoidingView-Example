@@ -23,7 +23,7 @@ const ProfileScreen = () => {
   return (
     <>
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : null}
+        behavior={Platform.select({ ios: 'padding' })}
         style={{flex: 1}}>
         <SafeAreaView style={styles.container}>
           <ScrollView style={{paddingVertical:2}}>
